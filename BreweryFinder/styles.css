@@ -1,0 +1,193 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #1d1d1d;
+}
+#content {
+    opacity: 0; /* Content should be invisible initially */
+    transition: opacity 2s  ease-in; /* Add transition to content */
+    align-content: center;
+}
+
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Loader should be on top initially */
+    background: url('img/brewery.gif') 50% 50% no-repeat rgb(0, 0, 0);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    opacity: 2; /* Loader should be visible initially */
+    transition: opacity 2s  ease-in; /* Add transition to loader */
+}
+
+#overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998; /* Overlay should be below the loader initially */
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 0; /* Overlay should be invisible initially */
+    transition: opacity 2s  ease-in;
+}
+
+header {
+    transition: opacity 0.5s ease; /* Add transition for fading effect */
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.5s ease; /* Add transition for fading effect */
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: rgba(0, 0, 0, 0.5); /* Black shadow tint */
+    z-index: 0;
+}
+
+.hero h1, .hero p, .hero input, .hero button {
+    z-index: 5;
+}
+
+.hero h1, .hero p {
+    color: #ffffff;
+}
+
+.hero input, .hero button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: #1d1d1d;
+}
+
+.hero button {
+    background: #ff6600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: #ff4500;
+}
+
+/* Brewery Grid */
+.brewery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    margin-bottom: 0%;
+    display:hide;
+}
+
+.brewery-grid div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.brewery-grid div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.brewery-grid div img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.brewery-grid div h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.brewery-grid div p {
+    margin: 10px 0 0;
+    color: #666;
+}
+.brewery-grid h2{
+    color: #ffffff;
+}
+.brewery-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.brewery-card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.brewery-card p {
+    margin: 5px 0;
+    color: #666;
+}
+/* Footer */
+footer {
+    position: relative;
+    margin-top: 0vh;
+    bottom: 0;
+    width: 100%;
+}
+
+.watermark {
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .brewery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .brewery-grid {
+        grid-template-columns: 1fr;
+    }
+}

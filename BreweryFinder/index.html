@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewery Finder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <html style="font-size: 16px;" lang="en"><head>
+    <link rel="shortcut icon" type=" " href="img/brew.png" />
+</head>
+<head>
+    <div id="loader"></div>
+    <div id="overlay"></div>
+    <div id="contents">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Brewery Finder</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <video id="background-video" autoplay loop muted poster="img/hero.mp4">
+                <source src="img/hero.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+            <div class="container text-center text-white">
+                <h1>Brewery Finder</h1>
+                <p>Find breweries by name or location</p>
+                <form class="form-inline justify-content-center">
+                    <input id="search-input" class="form-control mr-2" type="text" placeholder="Search breweries...">
+                    <button id="search-button" class="btn btn-warning" type="button">Search</button>
+                </form>
+            </div>
+        </section>
+        <section id="brewery-section" class="container mt-5">
+            <div class="row brewery-grid">
+                <!-- Brewery items will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>breweriesFinders</p>
+        <p class="watermark">Designed and developed by Ayibongwe</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
