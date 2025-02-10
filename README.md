@@ -15,9 +15,9 @@ Search Capabilities: Enables users to quickly and efficiently locate breweries b
 
 
 
-Installation and Setup: Clone the repository: git clone https://github.com/Ayibongwe02/Home-Protexion.git
+Installation and Setup: Clone the repository: git clone https://github.com/Ayibongwe02/Breweryfinder.git
 
-Navigate to the project directory: cd Home-Protexion
+Navigate to the project directory: cd BreweryFinder
 
 
 
